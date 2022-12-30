@@ -141,14 +141,13 @@ static_assert(__cplusplus >= 201703L, "**** Please define 'gnu++17' in 'platform
 */
 #include "confs/_macros.h"
 /** --------------------------------------
-   Pinout definition 
-*/
-#include "confs/pinout.h"
-/** --------------------------------------
   Global configuration - constants and global variables
 */
 #include "confs/_global.h"
-
+/** --------------------------------------
+   Pinout definition 
+*/
+#include "confs/pinout.h"
 /** --------------------------------------
   Definitions of enumerated types, struct types and their very first use
 */
