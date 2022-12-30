@@ -98,7 +98,7 @@ bool proceedLoadPrioritiesAndForcing(const int16_t currentTemperature_x100)
  * @param working mode boolean
  * @return none
  */
-void waitPrioritiesRotated(bool mode=false) {
+void waitPrioritiesRotated(bool mode) {
 #ifdef PRIORITY_ROTATION
 	if (mode && ROTATION_AFTER_CYCLES < absenceOfDivertedEnergyCount) {
 		absenceOfDivertedEnergyCount = 0;
