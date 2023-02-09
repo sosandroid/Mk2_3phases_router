@@ -6,7 +6,10 @@
 // Inconvénient: difficilement maintenable car toutes les combinaisons doivent ajoutées à la main
 
 constexpr bool uint8_differs(uint8_t a, uint8_t b) {
-	return a != b;
+	if (a == 0xff || b == 0xff || a != b) {
+		return true;
+	}
+	return false;
 }
 #define STATIC_ASSERT_UINT8T_DIFFERS(pin1, pin2) static_assert(uint8_differs(pin1, pin2), #pin1" == " #pin2);
 
