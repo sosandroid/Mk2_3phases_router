@@ -11,7 +11,7 @@ constexpr bool pin_differs(uint8_t a, uint8_t b) {
 	}
 	return false;
 }
-#define STATIC_ASSERT_PIN_DIFFERS(pin1, pin2) static_assert(pin_differs(pin1, pin2), #pin1" == " #pin2);
+#define STATIC_ASSERT_PIN_DIFFERS(pin1, pin2) static_assert(pin_differs(pin1, pin2), "Pin assignation error, can not work, please check pins setup and number " #pin2);
 
 namespace pindistribution_tests {
 	STATIC_ASSERT_PIN_DIFFERS(offPeakForcePin, tempSensorPin);
